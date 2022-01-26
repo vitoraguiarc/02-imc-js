@@ -21,7 +21,7 @@ function classificarImc(imc) {
         } else if (imc < 40) {
         mensagem = "e você está com obesidade grau II."
         } else {
-        mensagem = "e você está com obesidade grau III. Cuidado!";
+        mensagem = "e você está com obesidade grau III. Cuidado!"
         }
         return mensagem;
 }
