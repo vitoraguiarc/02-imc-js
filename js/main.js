@@ -30,13 +30,10 @@ function classificarImc(imc) {
         return mensagem;
 }
 
-// function mudarCor (mensagem) {
-//     if (mensagem == "e você está com obesidade grau III. Cuidado!" )
-//     {
-//         var cor = text.replace
-//     }
-    
-// }
+function mostrarPeso() {
+    let peso = document.getElementById('peso').value;
+    document.getElementById('display').value = peso;
+}
 
 function mostrarResultado () {
     const nome = document.getElementById('nome').value;

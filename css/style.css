@@ -31,7 +31,7 @@ main {
     background-color: #111;
     z-index: 1;
 }
-
+    
 .title {
     display: flex;
     justify-content: center;
