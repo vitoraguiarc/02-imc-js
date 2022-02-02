@@ -4,7 +4,7 @@ function camposValidos() {
     return document.getElementById('formulario').reportValidity();
 }
 
-function calcularImc(altura, peso){
+function calcularImc(peso, altura){
     return peso / (altura * altura);
 }
 
@@ -13,7 +13,11 @@ function classificarImc(imc) {
     if (imc < 18.5) {
         mensagem = "e você está abaixo do peso."
         } else if (imc < 25) {
-        mensagem = "e você está com peso ideal. Parabéns!"
+        // const v = "e você está com peso ideal."
+        // const cor = "Parabens!"
+        // mensagem = v.replace(value + <span class="verde">cor</span>)
+        mensagem = "e você está com peso ideal. Parabens"
+        mensagem = mensagem.replace("Parabens", '<span class="verde">Parabens</span>')
         } else if (imc < 30) {
         mensagem = "e você está levemente acima do peso."
         } else if (imc < 35) {
@@ -26,6 +30,14 @@ function classificarImc(imc) {
         return mensagem;
 }
 
+// function mudarCor (mensagem) {
+//     if (mensagem == "e você está com obesidade grau III. Cuidado!" )
+//     {
+//         var cor = text.replace
+//     }
+    
+// }
+
 function mostrarResultado () {
     const nome = document.getElementById('nome').value;
     const altura = document.getElementById('altura').value;
@@ -34,7 +46,7 @@ function mostrarResultado () {
 
     if (camposValidos()){
             
-        const imc = calcularImc(altura, peso);
+        const imc = calcularImc(peso, altura);
     
             let mensagem = classificarImc(imc); 
             
