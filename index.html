@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/input-text.css" />
         <link rel="stylesheet" href="./css/button.css" />
-        <script src="./js/main.js" defer></script>
+        <link rel="stylesheet" href="./css/input-range.css">
+        <script src="./js/main.js" defer type="module"></script>
     </head>
     <body>
         <main>
@@ -18,15 +19,15 @@
                         <label >Nome:</label>
                         <input type="text" id="nome" required />
                     </div>
-                    <div class="input">
-                        <label>Altura:</label>
-                        <input type="number" id="altura" required step="any" />
+                    <div class="range" >
+                        <label>Altura</label>
+                        <span id="valor-altura" data-unidade="M">1.90</span>
+                        <input type="range" id="altura" min="0" max="3"   step="0.01" >
                     </div>
-                    <div class="input">
-                        <label>Peso:</label>
-                        <input type="text" id="display"  readonly ;>
-                        <input type="range" min="0" max="200" id="peso" required step="0"  
-                        oninput="display.value=value" onchange="display.value=value"/>
+                    <div class="range" >
+                        <label>Peso</label>
+                        <span id="valor-peso" data-unidade="KG">90</span>
+                        <input type="range" id="peso" min="0" max="300"  step="0.1" />
                     </div>
                 </form>
                 <button id="calcular" class="button template">Calcular</button>
@@ -34,5 +35,4 @@
             </div>
         </main>
     </body>
-    colo
 </html>

@@ -51,6 +51,7 @@ form {
     align-items: center;
     width: 100%;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -72,10 +73,10 @@ button {
     user-select: none;
 }
 
-span.verde {
+#verde {
     color: green;
 }
 
-.vermelho {
+#vermelho {
     color: red;
 }
